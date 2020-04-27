@@ -1,9 +1,9 @@
 <resources>
     <string name="app_name">GestaoHospitais</string>
-    <string name="nome">nome</string>
-    <string name="numeroUtente">numeroUtente</string>
-    <string name="idade">idade</string>
-    <string name="morada">morada</string>
-    <string name="telefone">telefone</string>
+    <string name="nome">Nome</string>
+    <string name="numeroUtente">Numero de Utente</string>
+    <string name="idade">Idade</string>
+    <string name="morada">Morada</string>
+    <string name="telefone">Telefone</string>
     <string name="abrirSintomas">Ir para Sintomas</string>
 </resources>
