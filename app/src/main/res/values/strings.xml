@@ -6,4 +6,11 @@
     <string name="morada">Morada</string>
     <string name="telefone">Telefone</string>
     <string name="abrirSintomas">Ir para Sintomas</string>
+    <string name="registarDoente">Registar Doente</string>
+    <string name="Tosse">tosse</string>
+    <string name="tosse">Tosse</string>
+    <string name="febre">Febre</string>
+    <string name="dificuldade_respiratoria">Dificuldade Respiratoria</string>
+    <string name="fadiga">Fadiga</string>
+    <string name="n">N</string>
 </resources>

@@ -7,9 +7,38 @@
     android:orientation="vertical"
     tools:context=".SintomasActivity">
 
-    <TextView
-        android:id="@+id/textViewSintomas"
+    <Switch
+        android:id="@+id/switchTosse"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Sintomas" />
+        android:layout_margin="8dp"
+        android:text="@string/tosse" />
+
+    <Switch
+        android:id="@+id/switchFebre"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:text="@string/febre" />
+
+    <Switch
+        android:id="@+id/switchDificuldadeRespiratoria"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:text="@string/dificuldade_respiratoria" />
+
+    <Switch
+        android:id="@+id/switchFadiga"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:text="@string/fadiga" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:text="Button" />
 </LinearLayout>
