@@ -15,4 +15,5 @@
     <string name="n">N</string>
     <string name="abrirHospitais">Ir para Hospitais</string>
     <string name="doentes_internados">Doentes Internados</string>
+    <string name="numero_do_cc">Número do CC</string>
 </resources>

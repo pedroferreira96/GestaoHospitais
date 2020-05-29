@@ -32,17 +32,17 @@ public class RegistarDoenteActivity extends AppCompatActivity {
         EditText editTextNomeUtente = (EditText) findViewById(R.id.editTextNomeUtente);
         String nomeUtente = editTextNomeUtente.getText().toString();
 
-        if(nomeUtente.length() == 0){
+        if(nomeUtente.length() < 3){
             editTextNomeUtente.setError("Introduza o nome");
             editTextNomeUtente.requestFocus();
             return;
         }
 
-        EditText editTextNumeroUtente = (EditText) findViewById(R.id.editTextNumeroUtente);
+        EditText editTextNumeroUtente = (EditText) findViewById(R.id.editTextNumeroCC);
         String numeroUtente = editTextNumeroUtente.getText().toString();
 
-        if(numeroUtente.length() == 0){
-            editTextNumeroUtente.setError("Introduza o numero de utente");
+        if(numeroUtente.length() != 8){
+            editTextNumeroUtente.setError("Introduza o número do cartão de cidadão");
             editTextNumeroUtente.requestFocus();
             return;
         }
@@ -50,7 +50,7 @@ public class RegistarDoenteActivity extends AppCompatActivity {
         EditText editTextIdade = (EditText) findViewById(R.id.editTextIdade);
         String idade = editTextIdade.getText().toString();
 
-        if(idade.length() == 0){
+        if(idade.length() == 0 || idade.length() > 3){
             editTextIdade.setError("Introduza a idade");
             editTextIdade.requestFocus();
             return;
@@ -59,7 +59,7 @@ public class RegistarDoenteActivity extends AppCompatActivity {
         EditText editTextMorada = (EditText) findViewById(R.id.editTextMorada);
         String morada = editTextMorada.getText().toString();
 
-        if(morada.length() == 0){
+        if(morada.length() < 3){
             editTextMorada.setError("Introduza a morada");
             editTextMorada.requestFocus();
             return;
@@ -69,7 +69,7 @@ public class RegistarDoenteActivity extends AppCompatActivity {
         String telefone = editTextTelefone.getText().toString();
 
         if(telefone.length() != 9){
-            editTextTelefone.setError("Introduza um numero de telefone valido");
+            editTextTelefone.setError("Introduza um número de telefone válido");
             editTextTelefone.requestFocus();
             return;
         }

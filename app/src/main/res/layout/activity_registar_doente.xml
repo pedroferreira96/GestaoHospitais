@@ -25,11 +25,11 @@
             android:layout_height="match_parent">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/editTextNumeroUtente"
+                android:id="@+id/editTextNumeroCC"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="8dp"
-                android:hint="@string/numeroUtente"
+                android:hint="@string/numero_do_cc"
                 android:inputType="number" />
 
             <com.google.android.material.textfield.TextInputLayout
