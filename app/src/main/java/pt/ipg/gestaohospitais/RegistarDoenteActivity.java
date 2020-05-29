@@ -38,12 +38,12 @@ public class RegistarDoenteActivity extends AppCompatActivity {
             return;
         }
 
-        EditText editTextNumeroUtente = (EditText) findViewById(R.id.editTextNumeroCC);
-        String numeroUtente = editTextNumeroUtente.getText().toString();
+        EditText editTextNumeroCC = (EditText) findViewById(R.id.editTextNumeroCC);
+        String numeroCC = editTextNumeroCC.getText().toString();
 
-        if(numeroUtente.length() != 8){
-            editTextNumeroUtente.setError("Introduza o número do cartão de cidadão");
-            editTextNumeroUtente.requestFocus();
+        if(numeroCC.length() != 8){
+            editTextNumeroCC.setError("Introduza o número do cartão de cidadão");
+            editTextNumeroCC.requestFocus();
             return;
         }
 
