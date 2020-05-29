@@ -11,6 +11,7 @@ import android.widget.Button;
 public class MainActivity extends AppCompatActivity {
 
     private Button buttonRegistarDoente;
+    private Button buttonDoentesInternados;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,10 +26,23 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        buttonDoentesInternados = (Button) findViewById(R.id.buttonDoentesInternados);
+        buttonDoentesInternados.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openDoentesActivity();
+            }
+        });
+
     }
 
     public void openRegistarDoenteActivity(){
         Intent intent = new Intent(this, RegistarDoenteActivity.class);
+        startActivity(intent);
+    }
+
+    public void openDoentesActivity(){
+        Intent intent = new Intent(this,DoentesActivity.class);
         startActivity(intent);
     }
 
