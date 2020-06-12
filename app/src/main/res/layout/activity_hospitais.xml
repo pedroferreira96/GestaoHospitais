@@ -1,14 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".HospitaisActivity">
+    android:orientation="vertical"
+    tools:context=".HospitaisActivity" >
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
+    <CheckBox
+        android:id="@+id/checkBoxSousaMartins"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Lista de Hospitais" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+        android:layout_margin="8dp"
+        android:text="@string/hospital_sousa_martins_guarda" />
+
+    <CheckBox
+        android:id="@+id/checkBoxSantaMaria"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:text="@string/hospital_de_santa_maria_lisboa" />
+
+    <CheckBox
+        android:id="@+id/checkBoxSaoJoao"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:text="@string/hospital_de_sao_joao_porto" />
+
+    <CheckBox
+        android:id="@+id/checkBoxFaro"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:text="@string/hospital_de_faro" />
+
+    <Button
+        android:id="@+id/buttonConfirmarRegisto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:text="@string/confirmar_registo" />
+</LinearLayout>

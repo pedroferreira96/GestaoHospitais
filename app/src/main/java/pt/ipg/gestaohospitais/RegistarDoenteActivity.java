@@ -59,7 +59,7 @@ public class RegistarDoenteActivity extends AppCompatActivity {
         EditText editTextMorada = (EditText) findViewById(R.id.editTextMorada);
         String morada = editTextMorada.getText().toString();
 
-        if(morada.length() < 3){
+        if(morada.length() < 4){
             editTextMorada.setError("Introduza a morada");
             editTextMorada.requestFocus();
             return;
