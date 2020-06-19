@@ -21,4 +21,7 @@
     <string name="hospital_de_sao_joao_porto">Hospital de São João, Porto</string>
     <string name="hospital_de_faro">Hospital de Faro</string>
     <string name="confirmar_registo">Confirmar Registo</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
 </resources>
