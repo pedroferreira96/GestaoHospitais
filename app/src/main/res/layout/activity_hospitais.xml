@@ -7,33 +7,44 @@
     android:orientation="vertical"
     tools:context=".HospitaisActivity" >
 
-    <CheckBox
-        android:id="@+id/checkBoxSousaMartins"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="8dp"
-        android:text="@string/hospital_sousa_martins_guarda" />
 
-    <CheckBox
-        android:id="@+id/checkBoxSantaMaria"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="8dp"
-        android:text="@string/hospital_de_santa_maria_lisboa" />
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
 
-    <CheckBox
-        android:id="@+id/checkBoxSaoJoao"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="8dp"
-        android:text="@string/hospital_de_sao_joao_porto" />
+        <RadioButton
+            android:id="@+id/radioButtonGuarda"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:text="@string/hospital_sousa_martins_guarda"
+            android:onClick="checkButton"
+            android:checked="true"/>
 
-    <CheckBox
-        android:id="@+id/checkBoxFaro"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="8dp"
-        android:text="@string/hospital_de_faro" />
+        <RadioButton
+            android:id="@+id/radioButtonLisboa"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:text="@string/hospital_de_santa_maria_lisboa"
+            android:onClick="checkButton"/>
+
+        <RadioButton
+            android:id="@+id/radioButtonPorto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:text="@string/hospital_de_sao_joao_porto"
+            android:onClick="checkButton"/>
+
+        <RadioButton
+            android:id="@+id/radioButtonFaro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:text="@string/hospital_de_faro"
+            android:onClick="checkButton"/>
+    </RadioGroup>
 
     <Button
         android:id="@+id/buttonConfirmarRegisto"

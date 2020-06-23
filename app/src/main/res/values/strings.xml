@@ -24,4 +24,8 @@
     <string name="username">Username</string>
     <string name="password">Password</string>
     <string name="login">Login</string>
+    <string name="hospital_sousa_martins_guarda">Hospital Sousa Martins, Guarda</string>
+    <string name="hospital_de_santa_maria_lisboa">Hospital de Santa Maria, Lisboa</string>
+    <string name="hospital_de_sao_joao_porto">Hospital de São João, Porto</string>
+    <string name="hospital_de_faro">Hospital de Faro</string>
 </resources>

@@ -14,7 +14,7 @@ public class LoginActivity extends AppCompatActivity {
     private EditText username;
     private EditText password;
     private Button login;
-    
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
