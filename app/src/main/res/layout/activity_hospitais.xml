@@ -9,41 +9,38 @@
 
 
     <RadioGroup
+        android:id="@+id/radioGroup"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" >
+        android:layout_height="wrap_content">
 
         <RadioButton
             android:id="@+id/radioButtonGuarda"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
-            android:text="@string/hospital_sousa_martins_guarda"
-            android:onClick="checkButton"
-            android:checked="true"/>
+            android:checked="true"
+            android:text="@string/hospital_sousa_martins_guarda" />
 
         <RadioButton
             android:id="@+id/radioButtonLisboa"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
-            android:text="@string/hospital_de_santa_maria_lisboa"
-            android:onClick="checkButton"/>
+            android:text="@string/hospital_de_santa_maria_lisboa" />
 
         <RadioButton
             android:id="@+id/radioButtonPorto"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
-            android:text="@string/hospital_de_sao_joao_porto"
-            android:onClick="checkButton"/>
+            android:text="@string/hospital_de_sao_joao_porto" />
 
         <RadioButton
             android:id="@+id/radioButtonFaro"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
-            android:text="@string/hospital_de_faro"
-            android:onClick="checkButton"/>
+            android:text="@string/hospital_de_faro" />
     </RadioGroup>
 
     <Button

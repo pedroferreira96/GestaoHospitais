@@ -16,10 +16,6 @@
     <string name="abrirHospitais">Ir para Hospitais</string>
     <string name="doentes_internados">Doentes Internados</string>
     <string name="numero_do_cc">Número do CC</string>
-    <string name="hospital_sousa_martins_guarda">Hospital Sousa Martins, Guarda</string>
-    <string name="hospital_de_santa_maria_lisboa">Hospital de Santa Maria, Lisboa</string>
-    <string name="hospital_de_sao_joao_porto">Hospital de São João, Porto</string>
-    <string name="hospital_de_faro">Hospital de Faro</string>
     <string name="confirmar_registo">Confirmar Registo</string>
     <string name="username">Username</string>
     <string name="password">Password</string>
