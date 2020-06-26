@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 public class RegistarDoenteActivity extends AppCompatActivity {
 
@@ -23,8 +24,11 @@ public class RegistarDoenteActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 openSintomasActivity();
+
             }
         });
+
+        myDB = new DatabaseHelper(this);
 
     }
 
@@ -75,7 +79,19 @@ public class RegistarDoenteActivity extends AppCompatActivity {
             return;
         }
 
+        AddData(nomeUtente,numeroCC,idade,morada,telefone);
+
         Intent intent = new Intent(this, SintomasActivity.class);
         startActivity(intent);
+    }
+
+    public void AddData(String nomeUtente, String numeroCC, String idade, String morada, String telefone){
+        boolean insertData = myDB.addData(nomeUtente, numeroCC, idade, morada, telefone);
+
+        if(insertData==true){
+            Toast.makeText(RegistarDoenteActivity.this, "Dados guardados", Toast.LENGTH_SHORT).show();
+        }else{
+            Toast.makeText(RegistarDoenteActivity.this, "Ocorreu um erro", Toast.LENGTH_SHORT).show();
+        }
     }
 }
