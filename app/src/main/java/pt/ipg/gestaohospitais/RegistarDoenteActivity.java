@@ -11,6 +11,7 @@ import android.widget.EditText;
 public class RegistarDoenteActivity extends AppCompatActivity {
 
     private Button buttonAbrirSintomas;
+    DatabaseHelper myDB;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
