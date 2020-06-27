@@ -20,6 +20,8 @@ public class DoentesActivity extends AppCompatActivity {
     ListView listView;
     User user;
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

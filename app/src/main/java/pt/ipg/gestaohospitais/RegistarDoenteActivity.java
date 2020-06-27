@@ -11,6 +11,8 @@ import android.widget.Toast;
 
 public class RegistarDoenteActivity extends AppCompatActivity {
 
+    private static final String TAG = "RegistarDoenteActivity";
+
     private Button buttonAbrirSintomas;
     DatabaseHelper myDB;
 
