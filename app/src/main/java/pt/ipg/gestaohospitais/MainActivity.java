@@ -12,6 +12,7 @@ public class MainActivity extends AppCompatActivity {
 
     private Button buttonRegistarDoente;
     private Button buttonDoentesInternados;
+    private Button buttonListaHospitais;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,6 +32,15 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 openDoentesActivity();
+            }
+        });
+
+        buttonListaHospitais = (Button) findViewById(R.id.buttonListaHospitais);
+        buttonListaHospitais.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, ListaHospitaisActivity.class);
+                startActivity(intent);
             }
         });
 

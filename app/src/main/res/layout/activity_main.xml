@@ -30,4 +30,11 @@
         android:layout_margin="30dp"
         android:text="@string/doentes_internados" />
 
+    <Button
+        android:id="@+id/buttonListaHospitais"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="30dp"
+        android:text="@string/lista_hospitais" />
+
 </LinearLayout>

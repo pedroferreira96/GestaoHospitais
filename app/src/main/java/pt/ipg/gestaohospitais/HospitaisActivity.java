@@ -12,6 +12,8 @@ import android.widget.Toast;
 
 public class HospitaisActivity extends AppCompatActivity {
 
+    DatabaseHelper myDB;
+
     private Button buttonConfirmarRegisto;
     RadioGroup radioGroup;
     RadioButton radioButton;
@@ -20,6 +22,8 @@ public class HospitaisActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_hospitais);
+
+        myDB = new DatabaseHelper(this);
 
         radioGroup = findViewById(R.id.radioGroup);
 
@@ -63,6 +67,12 @@ public class HospitaisActivity extends AppCompatActivity {
                     break;
                 }
         }
+        addHospital(selectedHospital);
+    }
+
+    public void addHospital(String selectedHospital){
+        boolean insertData = myDB.addHospital(selectedHospital);
+
     }
 
     public void openMainActivity(){

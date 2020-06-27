@@ -21,6 +21,10 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     public static final String COL5 = "MORADA";
     public static final String COL6 = "TELEFONE";
 
+    public static final String TABLE_HOSPITAIS = "hospitais_data";
+    public static final String HCOL1 = "ID";
+    public static final String HCOL2 = "HOSPITAL";
+
     public DatabaseHelper(Context context){
         super(context, DATABASE_NAME, null, 1);
     }
@@ -29,12 +33,37 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase db) {
         String createTable = "CREATE TABLE " + TABLE_NAME + " (ID INTEGER PRIMARY KEY AUTOINCREMENT, " + " NOME TEXT, NUMERO_CC NUMBER, IDADE NUMBER, MORADA TEXT, TELEFONE TEXT)";
         db.execSQL(createTable);
+
+        String createTableHospitais = "CREATE TABLE " + TABLE_HOSPITAIS + " (ID INTEGER PRIMARY KEY AUTOINCREMENT, " + "HOSPITAL TEXT)";
+        db.execSQL(createTableHospitais);
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         db.execSQL("DROP TABLE IF EXISTS " + TABLE_NAME);
         onCreate(db);
+
+        db.execSQL("DROP TABLE IF EXISTS " + TABLE_HOSPITAIS);
+    }
+
+    public boolean addHospital(String hospital){
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues contentValues = new ContentValues();
+        contentValues.put(HCOL2, hospital);
+
+        long result = db.insert(TABLE_HOSPITAIS, null, contentValues);
+
+        if (result == -1) {
+            return false;
+        } else {
+            return true;
+        }
+    }
+
+    public Cursor getHospitalListContents(){
+        SQLiteDatabase db = this.getWritableDatabase();
+        Cursor data = db.rawQuery("SELECT * FROM " + TABLE_HOSPITAIS, null);
+        return data;
     }
 
     public boolean addData(String nomeUtente, String numeroCC, String idade, String morada, String telefone){

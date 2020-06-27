@@ -26,4 +26,5 @@
     <string name="hospital_de_faro">Hospital de Faro</string>
     <string name="gravar_alteracoes">Gravar Alterações</string>
     <string name="apagar_registo">Apagar Registo</string>
+    <string name="lista_hospitais">Lista Hospitais</string>
 </resources>
