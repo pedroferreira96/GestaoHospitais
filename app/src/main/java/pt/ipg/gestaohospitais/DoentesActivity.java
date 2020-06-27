@@ -2,9 +2,12 @@ package pt.ipg.gestaohospitais;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
 import android.provider.ContactsContract;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.Toast;
 
@@ -38,6 +41,14 @@ public class DoentesActivity extends AppCompatActivity {
             AdapterList adapter = new AdapterList(this, R.layout.lista_view, userList);
             listView = (ListView) findViewById(R.id.listView);
             listView.setAdapter(adapter);
+
+            listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                @Override
+                public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                    Intent intent = new Intent(DoentesActivity.this, EditarDoenteActivity.class);
+                    startActivity(intent);
+                }
+            });
         }
     }
 }

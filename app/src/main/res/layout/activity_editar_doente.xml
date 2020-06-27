@@ -74,7 +74,6 @@
                             android:layout_marginLeft="8dp"
                             android:layout_marginTop="16dp"
                             android:layout_marginRight="8dp"
-
                             android:text="@string/gravar_alteracoes" />
 
                         <Button
@@ -84,7 +83,6 @@
                             android:layout_marginLeft="8dp"
                             android:layout_marginTop="16dp"
                             android:layout_marginRight="8dp"
-
                             android:text="@string/apagar_registo" />
                     </com.google.android.material.textfield.TextInputLayout>
                 </com.google.android.material.textfield.TextInputLayout>
