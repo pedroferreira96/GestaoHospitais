@@ -16,7 +16,6 @@ public class HospitaisActivity extends AppCompatActivity {
     RadioGroup radioGroup;
     RadioButton radioButton;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,6 +36,33 @@ public class HospitaisActivity extends AppCompatActivity {
             }
         });
 
+    }
+
+    public void RadioButtonClicked(View view){
+        String selectedHospital = "";
+        boolean checked = ((RadioButton) view).isChecked();
+        switch (view.getId()){
+            case R.id.radioButtonGuarda:
+                if(checked){
+                    selectedHospital = "Hospital Sousa Martins, Guarda";
+                    break;
+                }
+            case R.id.radioButtonLisboa:
+                if(checked){
+                    selectedHospital = "Hospital de Santa Maria, Lisboa";
+                    break;
+                }
+            case R.id.radioButtonPorto:
+                if(checked){
+                    selectedHospital = "Hospital de São João, Porto";
+                    break;
+                }
+            case R.id.radioButtonFaro:
+                if(checked){
+                    selectedHospital = "Hospital de Faro";
+                    break;
+                }
+        }
     }
 
     public void openMainActivity(){

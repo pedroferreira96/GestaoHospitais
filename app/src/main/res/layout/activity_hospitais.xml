@@ -18,7 +18,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
-            android:checked="true"
+            android:onClick="RadioButtonClicked"
             android:text="@string/hospital_sousa_martins_guarda" />
 
         <RadioButton
@@ -26,6 +26,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
+            android:onClick="RadioButtonClicked"
             android:text="@string/hospital_de_santa_maria_lisboa" />
 
         <RadioButton
@@ -33,6 +34,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
+            android:onClick="RadioButtonClicked"
             android:text="@string/hospital_de_sao_joao_porto" />
 
         <RadioButton
@@ -40,6 +42,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
+            android:onClick="RadioButtonClicked"
             android:text="@string/hospital_de_faro" />
     </RadioGroup>
 
