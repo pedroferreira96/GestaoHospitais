@@ -13,11 +13,21 @@ public class MainActivity extends AppCompatActivity {
     private Button buttonRegistarDoente;
     private Button buttonDoentesInternados;
     private Button buttonListaHospitais;
+    private Button buttonHospitalDireto;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        buttonHospitalDireto = (Button) findViewById(R.id.buttonHospitalDireto);
+        buttonHospitalDireto.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, HospitaisActivity.class);
+                startActivity(intent);
+            }
+        });
 
         buttonRegistarDoente = (Button) findViewById(R.id.buttonRegistarDoente);
         buttonRegistarDoente.setOnClickListener(new View.OnClickListener() {

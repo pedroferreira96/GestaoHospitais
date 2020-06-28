@@ -37,4 +37,10 @@
         android:layout_margin="30dp"
         android:text="@string/lista_hospitais" />
 
+    <Button
+        android:id="@+id/buttonHospitalDireto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Hospital direto" />
+
 </LinearLayout>

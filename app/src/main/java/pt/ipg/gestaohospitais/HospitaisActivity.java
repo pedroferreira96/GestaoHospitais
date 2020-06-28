@@ -16,7 +16,8 @@ public class HospitaisActivity extends AppCompatActivity {
 
     private Button buttonConfirmarRegisto;
     RadioGroup radioGroup;
-    RadioButton radioButton;
+    RadioButton radioButtonGuarda, radioButtonLisboa, radioButtonPorto, radioButtonFaro;
+    String selectedType = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,53 +27,56 @@ public class HospitaisActivity extends AppCompatActivity {
         myDB = new DatabaseHelper(this);
 
         radioGroup = findViewById(R.id.radioGroup);
+        radioButtonGuarda = findViewById(R.id.radioButtonGuarda);
+        radioButtonLisboa = findViewById(R.id.radioButtonLisboa);
+        radioButtonPorto = findViewById(R.id.radioButtonPorto);
+        radioButtonFaro = findViewById(R.id.radioButtonFaro);
+
+        radioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+                if(checkedId==R.id.radioButtonGuarda){
+                    selectedType = radioButtonGuarda.getText().toString();
+                }else if(checkedId==R.id.radioButtonLisboa){
+                    selectedType = radioButtonLisboa.getText().toString();
+                }else if(checkedId==R.id.radioButtonPorto){
+                    selectedType = radioButtonPorto.getText().toString();
+                }else{
+                    selectedType = radioButtonFaro.getText().toString();
+                }
+            }
+        });
+
+
 
         buttonConfirmarRegisto = (Button) findViewById(R.id.buttonConfirmarRegisto);
         buttonConfirmarRegisto.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                int radioId = radioGroup.getCheckedRadioButtonId();
-                radioButton = findViewById(radioId);
+                //String newEntry = selectedType;
+                addHospital(selectedType);
 
-                Toast.makeText(HospitaisActivity.this, "Registo Guardado", Toast.LENGTH_SHORT).show();
+                //int radioId = radioGroup.getCheckedRadioButtonId();
+                //radioButton = findViewById(radioId);
+
+                //Toast.makeText(HospitaisActivity.this, "Registo Guardado", Toast.LENGTH_SHORT).show();
                 openMainActivity();
             }
         });
 
     }
 
-    public void RadioButtonClicked(View view){
-        String selectedHospital = "";
-        boolean checked = ((RadioButton) view).isChecked();
-        switch (view.getId()){
-            case R.id.radioButtonGuarda:
-                if(checked){
-                    selectedHospital = "Hospital Sousa Martins, Guarda";
-                    break;
-                }
-            case R.id.radioButtonLisboa:
-                if(checked){
-                    selectedHospital = "Hospital de Santa Maria, Lisboa";
-                    break;
-                }
-            case R.id.radioButtonPorto:
-                if(checked){
-                    selectedHospital = "Hospital de São João, Porto";
-                    break;
-                }
-            case R.id.radioButtonFaro:
-                if(checked){
-                    selectedHospital = "Hospital de Faro";
-                    break;
-                }
+
+
+    public void addHospital(String selectedType){
+        boolean insertData = myDB.addHospital(selectedType);
+
+        if(insertData==true){
+            Toast.makeText(this, "Hospital registado!", Toast.LENGTH_LONG).show();
+        }else{
+            Toast.makeText(this, "Ocorreu um erro.", Toast.LENGTH_LONG).show();
         }
-        addHospital(selectedHospital);
-    }
-
-    public void addHospital(String selectedHospital){
-        boolean insertData = myDB.addHospital(selectedHospital);
-
     }
 
     public void openMainActivity(){
