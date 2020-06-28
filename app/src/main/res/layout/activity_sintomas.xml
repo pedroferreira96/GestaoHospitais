@@ -8,6 +8,10 @@
     android:background="@drawable/gradient_login"
     tools:context=".SintomasActivity">
 
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar"/>
+
     <Switch
         android:id="@+id/switchTosse"
         android:layout_width="match_parent"

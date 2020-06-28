@@ -8,6 +8,10 @@
     tools:context=".MainActivity"
     android:background="@drawable/gradient_background">
 
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar"/>
+
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="168dp"

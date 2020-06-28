@@ -1,9 +1,14 @@
 package pt.ipg.gestaohospitais;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.RadioButton;
@@ -23,6 +28,9 @@ public class HospitaisActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_hospitais);
+
+        Toolbar toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
 
         myDB = new DatabaseHelper(this);
 
@@ -67,7 +75,22 @@ public class HospitaisActivity extends AppCompatActivity {
 
     }
 
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.menu, menu);
+        return true;
+    }
 
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        switch (item.getItemId()){
+            case R.id.itemSair:
+                Intent intent = new Intent(HospitaisActivity.this, LoginActivity.class);
+                startActivity(intent);
+            default: return super.onOptionsItemSelected(item);
+        }
+    }
 
     public void addHospital(String selectedType){
         boolean insertData = myDB.addHospital(selectedType);

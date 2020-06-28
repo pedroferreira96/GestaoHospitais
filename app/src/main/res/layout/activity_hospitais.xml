@@ -8,6 +8,11 @@
     android:background="@drawable/gradient_login"
     tools:context=".HospitaisActivity" >
 
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar"/>
+
+
 
     <RadioGroup
         android:id="@+id/radioGroup"
