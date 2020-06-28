@@ -75,7 +75,7 @@ public class HospitaisActivity extends AppCompatActivity {
         if(insertData==true){
             Toast.makeText(this, "Hospital registado!", Toast.LENGTH_LONG).show();
         }else{
-            Toast.makeText(this, "Ocorreu um erro.", Toast.LENGTH_LONG).show();
+            Toast.makeText(this, "Ocorreu um erro no registo do hospital na bd.", Toast.LENGTH_LONG).show();
         }
     }
 

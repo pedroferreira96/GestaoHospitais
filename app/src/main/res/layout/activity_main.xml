@@ -18,29 +18,38 @@
 
     <Button
         android:id="@+id/buttonRegistarDoente"
-        android:layout_width="match_parent"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
         android:layout_margin="30dp"
-        android:text="@string/registarDoente" />
+        android:background="@drawable/custom_button"
+        android:text="@string/registarDoente"
+        android:textAllCaps="false"
+        android:textColor="#000000"
+        android:textSize="20sp" />
 
     <Button
         android:id="@+id/buttonDoentesInternados"
-        android:layout_width="match_parent"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
         android:layout_margin="30dp"
+        android:textAllCaps="false"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        android:background="@drawable/custom_button"
         android:text="@string/doentes_internados" />
 
     <Button
         android:id="@+id/buttonListaHospitais"
-        android:layout_width="match_parent"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
         android:layout_margin="30dp"
+        android:textAllCaps="false"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        android:background="@drawable/custom_button"
         android:text="@string/lista_hospitais" />
-
-    <Button
-        android:id="@+id/buttonHospitalDireto"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Hospital direto" />
 
 </LinearLayout>
