@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@drawable/gradient_login"
     tools:context=".EditarDoenteActivity">
 
     <com.google.android.material.textfield.TextInputLayout
@@ -69,8 +70,13 @@
 
                         <Button
                             android:id="@+id/buttonGravar"
-                            android:layout_width="match_parent"
+                            android:layout_width="200dp"
                             android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:textAllCaps="false"
+                            android:textColor="#FFFFFF"
+                            android:textSize="20sp"
+                            android:background="@drawable/custom_button_blue"
                             android:layout_marginLeft="8dp"
                             android:layout_marginTop="16dp"
                             android:layout_marginRight="8dp"
@@ -78,8 +84,13 @@
 
                         <Button
                             android:id="@+id/buttonApagar"
-                            android:layout_width="match_parent"
+                            android:layout_width="200dp"
                             android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:textAllCaps="false"
+                            android:textColor="#FFFFFF"
+                            android:textSize="20sp"
+                            android:background="@drawable/custom_button_red"
                             android:layout_marginLeft="8dp"
                             android:layout_marginTop="16dp"
                             android:layout_marginRight="8dp"
